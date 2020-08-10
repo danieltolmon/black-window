@@ -89,7 +89,7 @@
 .slick-track:after {
   display: table;
 
-  content: "";
+  content: '';
 }
 .slick-track:after {
   clear: both;
@@ -105,7 +105,7 @@
   height: 100%;
   min-height: 1px;
 }
-[dir="rtl"] .slick-slide {
+[dir='rtl'] .slick-slide {
   float: right;
 }
 .slick-slide img {
@@ -150,16 +150,17 @@ button.slick-arrow.slick-next {
   color: transparent;
   outline: none;
   background: transparent;
-  width: 15%;
+  width: 10%;
   z-index: 2;
-  opacity: 0.5;
+  background: white;
+  opacity: 0.7;
 }
 .slick-prev {
   left: 0;
   &::before {
-    content: "\f053";
+    content: '\f053';
     font-weight: 600;
-    font-family: Font Awesome\ 5 Free;
+    font-family: 'Font Awesome 5 Free';
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     display: inline-block;
@@ -167,7 +168,7 @@ button.slick-arrow.slick-next {
     font-variant: normal;
     text-rendering: auto;
     line-height: 1;
-    color: white;
+    color: black;
     font-size: 30px;
     width: 100%;
   }
@@ -175,9 +176,9 @@ button.slick-arrow.slick-next {
 .slick-next {
   right: 0;
   &::before {
-    content: "\f054";
+    content: '\f054';
     font-weight: 600;
-    font-family: Font Awesome\ 5 Free;
+    font-family: 'Font Awesome 5 Free';
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     display: inline-block;
@@ -185,7 +186,7 @@ button.slick-arrow.slick-next {
     font-variant: normal;
     text-rendering: auto;
     line-height: 1;
-    color: #fff;
+    color: black;
     font-size: 30px;
     width: 100%;
   }
@@ -233,7 +234,7 @@ button.slick-arrow.slick-next {
     left: 0;
     width: 10px;
     height: 10px;
-    content: "\2022";
+    content: '\2022';
     text-align: center;
     opacity: 1;
     background-color: #fff;
@@ -251,4 +252,15 @@ button.slick-arrow.slick-next {
   box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12),
     0 2px 4px -1px rgba(0, 0, 0, 0.2);
   top: -3px;
+}
+
+.slick-center {
+  transform: scale(1.2);
+  z-index: 9999;
+  position: relative;
+  transition: transform 0.3s ease-in;
+}
+
+.slick-active {
+  width: 100%;
 }

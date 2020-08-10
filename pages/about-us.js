@@ -11,7 +11,9 @@ import GridItem from 'components/Grid/GridItem.js';
 import HeaderLinks from 'components/Header/HeaderLinks.js';
 import Parallax from 'components/Parallax/Parallax.js';
 
-import profile from 'assets/img/faces/christian.jpg';
+import profile from 'assets/img/about-us-black.jpg';
+import logoBlack from 'assets/img/logo-black.png';
+import logoWhite from 'assets/img/logo-white.png';
 
 import styles from 'assets/jss/nextjs-material-kit/pages/profilePage.js';
 
@@ -29,7 +31,8 @@ export default function ProfilePage(props) {
     <div>
       <Header
         color="transparent"
-        brand="Black Window"
+        brandBlack={<img src={logoBlack} alt="logo" height="50px" />}
+        brandWhite={<img src={logoWhite} alt="logo" height="50px" />}
         rightLinks={<HeaderLinks />}
         fixed
         changeColorOnScroll={{
@@ -38,7 +41,7 @@ export default function ProfilePage(props) {
         }}
         {...rest}
       />
-      <Parallax small filter image={require('assets/img/profile-bg.jpg')} />
+      <Parallax small filter image={require('assets/img/contact-us.jpg')} />
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div
           style={{
@@ -55,28 +58,35 @@ export default function ProfilePage(props) {
                     <img src={profile} alt="..." className={imageClasses} />
                   </div>
                   <div className={classes.name}>
-                    <h3 className={classes.title}>Fernando Granados</h3>
-                    <h6>VIDEO PRODUCER</h6>
-                    <Button justIcon link className={classes.margin5}>
-                      <i className={'fab fa-twitter'} />
-                    </Button>
-                    <Button justIcon link className={classes.margin5}>
-                      <i className={'fab fa-instagram'} />
-                    </Button>
-                    <Button justIcon link className={classes.margin5}>
-                      <i className={'fab fa-facebook'} />
-                    </Button>
+                    <h3 className={classes.title}>BLACK WINDOW STUDIO</h3>
                   </div>
                 </div>
               </GridItem>
             </GridContainer>
             <div className={classes.description}>
-              <p>
-                An artist of considerable range, Chet Faker — the name taken by
-                Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs
-                and records all of his own music, giving it a warm, intimate
-                feel with a solid groove structure.{' '}
-              </p>
+              En el sector audiovisual, al resultado final hay que añadirle
+              siempre todo el proceso previo. Para que cualquier resultado tenga
+              alma, aparte de calidad técnica, precisa de estar hecho con
+              pasión, entusiasmo y compromiso. En Black Window Studio sabemos
+              que cumplimos con ello. Creemos en todos los proyectos en los que
+              nos involucramos, ya sea porque nos gusta el fin, el mensaje o las
+              personas que están detrás de ellos. <br />
+              <br />
+              Desde un videoclip a un spot publicitario. Desde un vídeo
+              corporativo a una obra de ficción. Desde el primer segundo hasta
+              el último click. <br />
+              <br />
+              Creemos que las personas con las que trabajamos no son clientes,
+              sino socios. Nos ayudamos mutuamente a seguir creciendo y a
+              conseguir los desafíos que tenemos propuestos.
+              <br />
+              <br />
+              Siempre con el material audiovisual necesario, garantizamos la
+              seguridad y el compromiso tanto en la calidad final como en los
+              plazos de entrega.
+              <br />
+              <br />
+              <strong>¿Te apuntas?</strong>
             </div>
           </div>
 

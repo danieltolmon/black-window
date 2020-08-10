@@ -21,7 +21,8 @@ import CustomInput from 'components/CustomInput/CustomInput.js';
 
 import styles from 'assets/jss/nextjs-material-kit/pages/loginPage.js';
 
-import image from 'assets/img/bg7.jpg';
+import image from 'assets/img/contact-us-bg2.jpg';
+import Link from 'next/link';
 
 const useStyles = makeStyles(styles);
 
@@ -51,45 +52,39 @@ export default function LoginPage(props) {
       >
         <div className={classes.container}>
           <GridContainer justify="center">
-            <GridItem xs={12} sm={6} md={4}>
-              <Card className={classes[cardAnimaton]}>
-                <form className={classes.form}>
-                  <CardHeader color="primary" className={classes.cardHeader}>
-                    <h4>Contact us</h4>
-                    <div className={classes.socialLine}>
-                      <Button
-                        justIcon
-                        href="#pablo"
-                        target="_blank"
-                        color="transparent"
-                        onClick={(e) => e.preventDefault()}
-                      >
-                        <i className={'fab fa-twitter'} />
-                      </Button>
-                      <Button
-                        justIcon
-                        href="#pablo"
-                        target="_blank"
-                        color="transparent"
-                        onClick={(e) => e.preventDefault()}
-                      >
-                        <i className={'fab fa-facebook'} />
-                      </Button>
-                      <Button
-                        justIcon
-                        href="#pablo"
-                        target="_blank"
-                        color="transparent"
-                        onClick={(e) => e.preventDefault()}
-                      >
-                        <i className={'fab fa-instagram'} />
-                      </Button>
-                    </div>
-                  </CardHeader>
-                  <p className={classes.divider}>Or Be Classical</p>
+            <GridItem xs={12} sm={12} md={10}>
+              <Card
+                className={classes[cardAnimaton]}
+                style={{ marginTop: '80px' }}
+              >
+                <CardHeader color="primary" className={classes.cardHeader}>
+                  <h3 className={classes.title}>CONTACT US</h3>
+                  <div className={classes.socialLine}>
+                    <a
+                      justIcon
+                      href="https://www.instagram.com/blackwindowstudio/"
+                      target="_blank"
+                      style={{ color: 'white' }}
+                    >
+                      <i
+                        className={'fab fa-instagram'}
+                        style={{ fontSize: '50px' }}
+                      />
+                    </a>
+                  </div>
+                </CardHeader>
+                {/* <p className={classes.divider}>Or Be Classical</p>
+                <form
+                  className={classes.form}
+                  action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScEIJhXVr3iCopP9GGN2fwRMnWXvCAmRp1z9T2N19N9cubSaw/formResponse?embedded=true"
+                  method="POST"
+                  target="hidden_iframe"
+                  onsubmit="submitted=true;"
+                >
                   <CardBody>
                     <CustomInput
                       labelText="First Name..."
+                      inputProps={{ name: 'entry.188505898' }}
                       id="first"
                       formControlProps={{
                         fullWidth: true,
@@ -106,6 +101,7 @@ export default function LoginPage(props) {
                     <CustomInput
                       labelText="Email..."
                       id="email"
+                      inputProps={{ name: 'entry.1394731983' }}
                       formControlProps={{
                         fullWidth: true,
                       }}
@@ -121,6 +117,7 @@ export default function LoginPage(props) {
                     <CustomInput
                       labelText="Your Message"
                       id="message"
+                      inputProps={{ name: 'entry.459729972' }}
                       formControlProps={{
                         fullWidth: true,
                         className: classes.textArea,
@@ -130,13 +127,23 @@ export default function LoginPage(props) {
                         rows: 5,
                       }}
                     />
+                    <CardFooter className={classes.cardFooter}>
+                      <Button type="submit" simple color="primary" size="lg">
+                        SEND !
+                      </Button>
+                    </CardFooter>
+                    <iframe
+                      src="https://docs.google.com/forms/d/e/1FAIpQLScEIJhXVr3iCopP9GGN2fwRMnWXvCAmRp1z9T2N19N9cubSaw/viewform?embedded=true"
+                      width="100%"
+                      height="1000px"
+                      frameborder="0"
+                      marginheight="0"
+                      marginwidth="0"
+                    >
+                      Cargando…
+                    </iframe>
                   </CardBody>
-                  <CardFooter className={classes.cardFooter}>
-                    <Button simple color="primary" size="lg">
-                      Get started
-                    </Button>
-                  </CardFooter>
-                </form>
+                </form> */}
               </Card>
             </GridItem>
           </GridContainer>

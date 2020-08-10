@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 // nodejs library that concatenates classes
 import classNames from 'classnames';
@@ -16,11 +16,13 @@ import Drawer from '@material-ui/core/Drawer';
 import Menu from '@material-ui/icons/Menu';
 // core components
 import styles from 'assets/jss/nextjs-material-kit/components/headerStyle.js';
+import { SentimentSatisfied } from '@material-ui/icons';
 
 const useStyles = makeStyles(styles);
 
 export default function Header(props) {
   const classes = useStyles();
+  const [changeLogoColor, setChangeLogoColor] = useState('white');
   const [mobileOpen, setMobileOpen] = React.useState(false);
   React.useEffect(() => {
     if (props.changeColorOnScroll) {
@@ -39,6 +41,7 @@ export default function Header(props) {
     const { color, changeColorOnScroll } = props;
     const windowsScrollTop = window.pageYOffset;
     if (windowsScrollTop > changeColorOnScroll.height) {
+      setChangeLogoColor('black');
       document.body
         .getElementsByTagName('header')[0]
         .classList.remove(classes[color]);
@@ -46,6 +49,7 @@ export default function Header(props) {
         .getElementsByTagName('header')[0]
         .classList.add(classes[changeColorOnScroll.color]);
     } else {
+      setChangeLogoColor('white');
       document.body
         .getElementsByTagName('header')[0]
         .classList.add(classes[color]);
@@ -54,7 +58,16 @@ export default function Header(props) {
         .classList.remove(classes[changeColorOnScroll.color]);
     }
   };
-  const { color, rightLinks, leftLinks, brand, fixed, absolute } = props;
+  const {
+    color,
+    rightLinks,
+    leftLinks,
+    brandBlack,
+    brandWhite,
+    fixed,
+    absolute,
+    changeColorOnScroll,
+  } = props;
   const appBarClasses = classNames({
     [classes.appBar]: true,
     [classes[color]]: color,
@@ -62,8 +75,10 @@ export default function Header(props) {
     [classes.fixed]: fixed,
   });
   const brandComponent = (
-    <Link href="/components" as="/components">
-      <Button className={classes.title}>{brand}</Button>
+    <Link href="/index" as="/index">
+      <Button className={classes.title}>
+        {changeLogoColor === 'white' ? brandWhite : brandBlack}
+      </Button>
     </Link>
   );
   return (
