@@ -39,7 +39,9 @@ export default function CenterMode({ videos }) {
           const { medium } = thumbnails;
           return (
             <li key={id} className={styles.card}>
-              <Link href={`/video/${resourceId.videoId}`}>
+              <Link
+                href={{ pathname: '/video', query: { id: resourceId.videoId } }}
+              >
                 <img
                   style={{
                     width: '100%',
