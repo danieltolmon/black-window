@@ -4,7 +4,7 @@ import Header from 'components/Header/Header.js';
 import HeaderLinks from 'components/Header/HeaderLinks.js';
 import Footer from 'components/Footer/Footer.js';
 
-import styles from 'assets/jss/nextjs-material-kit/pages/loginPage.js';
+import styles from 'assets/jss/nextjs-material-kit/pages/contactUsPage.js';
 
 import image from 'assets/img/backgrounds/video-bg.jpg';
 import logoBlack from 'assets/img/logo-black.png';
@@ -13,7 +13,7 @@ import logoWhite from 'assets/img/logo-white.png';
 const useStyles = makeStyles(styles);
 import { useRouter } from 'next/router';
 
-export default function LoginPage(props) {
+export default function Video(props) {
   const router = useRouter();
   const { id } = router.query;
   const classes = useStyles();
@@ -41,13 +41,13 @@ export default function LoginPage(props) {
           <iframe
             style={{
               width: '100%',
-              minHeight: '80vh',
+              minHeight: '78vh',
               height: '100%',
               padding: '5px',
               border: 'none',
             }}
-            frameborder="0"
-            allowfullscreen
+            frameBorder="0"
+            allowFullScreen
             src={`https://www.youtube.com/embed/${id}?autoplay=1`}
           ></iframe>
         </div>
