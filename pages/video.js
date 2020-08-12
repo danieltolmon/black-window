@@ -6,7 +6,9 @@ import Footer from 'components/Footer/Footer.js';
 
 import styles from 'assets/jss/nextjs-material-kit/pages/loginPage.js';
 
-import image from 'assets/img/bg7.jpg';
+import image from 'assets/img/backgrounds/video-bg.jpg';
+import logoBlack from 'assets/img/logo-black.png';
+import logoWhite from 'assets/img/logo-white.png';
 
 const useStyles = makeStyles(styles);
 import { useRouter } from 'next/router';
@@ -19,6 +21,8 @@ export default function LoginPage(props) {
   return (
     <div>
       <Header
+        brandBlack={<img src={logoBlack} alt="logo" height="50px" />}
+        brandWhite={<img src={logoWhite} alt="logo" height="50px" />}
         absolute
         color="transparent"
         brand="Logo Black Window"

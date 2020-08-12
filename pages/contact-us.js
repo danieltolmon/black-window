@@ -19,9 +19,9 @@ import CardHeader from 'components/Card/CardHeader.js';
 import CardFooter from 'components/Card/CardFooter.js';
 import CustomInput from 'components/CustomInput/CustomInput.js';
 
-import styles from 'assets/jss/nextjs-material-kit/pages/loginPage.js';
+import styles from 'assets/jss/nextjs-material-kit/pages/contactUsPage.js';
 
-import image from 'assets/img/contact-us-bg2.jpg';
+import image from 'assets/img/backgrounds/contact-us-bg.jpg';
 import Link from 'next/link';
 
 const useStyles = makeStyles(styles);

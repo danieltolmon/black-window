@@ -1,6 +1,6 @@
 import React from 'react';
 import Slider from 'react-slick';
-import styles from 'assets/jss/nextjs-material-kit/pages/components.js';
+import styles from 'assets/jss/nextjs-material-kit/pages/videosPage.js';
 import Link from 'next/link';
 
 export default function CenterMode({ videos }) {

@@ -1,8 +1,8 @@
 import { container, title } from 'assets/jss/nextjs-material-kit.js';
 
-import imagesStyle from 'assets/jss/nextjs-material-kit/imagesStyles.js';
+import imagesStyle from 'assets/jss/nextjs-material-kit/components/imagesStyles.js';
 
-const profilePageStyle = {
+const AboutUsStyles = {
   container,
   profile: {
     textAlign: 'center',
@@ -61,4 +61,4 @@ const profilePageStyle = {
   },
 };
 
-export default profilePageStyle;
+export default AboutUsStyles;

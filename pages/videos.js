@@ -8,11 +8,12 @@ import Footer from 'components/Footer/Footer.js';
 import GridContainer from 'components/Grid/GridContainer.js';
 import GridItem from 'components/Grid/GridItem.js';
 import { fetchYoutubeList } from '../data/youtubeAPI';
-import Slider from '../pages-sections/Slider';
+import Slider from 'components/VideoCarrusel/Slider.js';
+import VideoTitle from 'components/VideoTitles/VideoTitles.js';
 
 import Parallax from 'components/Parallax/Parallax.js';
 
-import styles from 'assets/jss/nextjs-material-kit/pages/components.js';
+import styles from 'assets/jss/nextjs-material-kit/pages/videosPage.js';
 import logoBlack from 'assets/img/logo-black.png';
 import logoWhite from 'assets/img/logo-white.png';
 
@@ -87,38 +88,24 @@ export default function Components(props) {
             height: '100%',
           }}
         >
-          <h2
-            style={{
-              margin: '20px',
-              textAlign: 'center',
-              fontFamily: 'Montserrat',
-            }}
-          >
-            VIDEOCLIPS
-          </h2>
-          {videosClips && <Slider videos={videosClips} />}
-          <h2
-            style={{
-              margin: '20px',
-              marginTop: '100px',
-              textAlign: 'center',
-              fontFamily: 'Montserrat',
-            }}
-          >
-            EVENTS
-          </h2>
-          {videosEventos && <Slider videos={videosEventos} />}
-          <h2
-            style={{
-              margin: '20px',
-              marginTop: '100px',
-              textAlign: 'center',
-              fontFamily: 'Montserrat',
-            }}
-          >
-            SPOTS/CM
-          </h2>
-          {videosSpots && <Slider videos={videosSpots} />}
+          {videosClips && (
+            <>
+              <VideoTitle>VIDEOCLIPS</VideoTitle>
+              <Slider videos={videosClips} />{' '}
+            </>
+          )}
+          {videosEventos && (
+            <>
+              <VideoTitle>EVENTS</VideoTitle>
+              <Slider videos={videosEventos} />{' '}
+            </>
+          )}
+          {videosSpots && (
+            <>
+              <VideoTitle>SPOTS/CM</VideoTitle>
+              <Slider videos={videosSpots} />
+            </>
+          )}
         </div>
       </div>
       <Footer />

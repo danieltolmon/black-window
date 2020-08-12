@@ -15,11 +15,11 @@ import profile from 'assets/img/about-us-black.jpg';
 import logoBlack from 'assets/img/logo-black.png';
 import logoWhite from 'assets/img/logo-white.png';
 
-import styles from 'assets/jss/nextjs-material-kit/pages/profilePage.js';
+import styles from 'assets/jss/nextjs-material-kit/pages/aboutUsPage.js';
 
 const useStyles = makeStyles(styles);
 
-export default function ProfilePage(props) {
+export default function AboutUsPage(props) {
   const classes = useStyles();
   const { ...rest } = props;
   const imageClasses = classNames(
@@ -41,7 +41,11 @@ export default function ProfilePage(props) {
         }}
         {...rest}
       />
-      <Parallax small filter image={require('assets/img/contact-us.jpg')} />
+      <Parallax
+        small
+        filter
+        image={require('assets/img/backgrounds/about-us-bg.jpg')}
+      />
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div
           style={{

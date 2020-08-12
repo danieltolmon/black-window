@@ -66,7 +66,6 @@ export default function Header(props) {
     brandWhite,
     fixed,
     absolute,
-    changeColorOnScroll,
   } = props;
   const appBarClasses = classNames({
     [classes.appBar]: true,
