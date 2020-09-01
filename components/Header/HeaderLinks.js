@@ -51,9 +51,23 @@ export default function HeaderLinks(props) {
         />
       </ListItem> */}
       <ListItem className={classes.listItem}>
-        <Button href="/videos" color="transparent" className={classes.navLink}>
-          Our Videos
-        </Button>
+        {props.setScrollToVideos ? (
+          <Button
+            color="transparent"
+            className={classes.navLink}
+            onClick={() => props.setScrollToVideos(true)}
+          >
+            Our Videos
+          </Button>
+        ) : (
+          <Button
+            href="/?videos=videoclips"
+            color="transparent"
+            className={classes.navLink}
+          >
+            Our Videos
+          </Button>
+        )}
       </ListItem>
       <ListItem className={classes.listItem}>
         <Button
