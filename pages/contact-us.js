@@ -80,9 +80,10 @@ export default function LoginPage(props) {
                   className={classes.form}
                   // action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSflEByMaUcI0P2uVZnAiW92KAQvThE1eJIQ0ev1YDcUHWR-cw/formResponse"
                   method="POST"
-                  target="hidden_iframe"
-                  onsubmit="submitted=true;"
+                  // target="hidden_iframe"
+                  // onsubmit="submitted=true;"
                   data-netlify="true"
+                  name="contact-us"
                 >
                   <CardBody>
                     <CustomInput
