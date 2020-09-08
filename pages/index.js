@@ -49,7 +49,6 @@ export default function Videos(props) {
   }, [scrollToVideos]);
 
   const scrollTo = () => {
-    debugger;
     window.scrollTo({
       top: myRef.current.offsetTop,
       behavior: 'smooth', // smooth scroll.
