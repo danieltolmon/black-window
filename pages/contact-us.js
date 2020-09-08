@@ -79,6 +79,7 @@ export default function LoginPage(props) {
                 <form
                   className={classes.form}
                   // action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSflEByMaUcI0P2uVZnAiW92KAQvThE1eJIQ0ev1YDcUHWR-cw/formResponse"
+                  action="/success"
                   method="POST"
                   // target="hidden_iframe"
                   // onsubmit="submitted=true;"
