@@ -85,7 +85,9 @@ export default function LoginPage(props) {
                   // onsubmit="submitted=true;"
                   data-netlify="true"
                   name="contact-us"
+                  data-netlify-honeypot="bot-field"
                 >
+                  <input type="hidden" name="bot-field" />
                   <CardBody>
                     <CustomInput
                       labelText="First Name..."
