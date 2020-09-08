@@ -1,11 +1,7 @@
 import React from 'react';
 // @material-ui/core components
 import { makeStyles } from '@material-ui/core/styles';
-import InputAdornment from '@material-ui/core/InputAdornment';
-import Icon from '@material-ui/core/Icon';
-// @material-ui/icons
-import Email from '@material-ui/icons/Email';
-import People from '@material-ui/icons/People';
+
 // core components
 import Header from 'components/Header/Header.js';
 import HeaderLinks from 'components/Header/HeaderLinks.js';
@@ -14,10 +10,7 @@ import GridContainer from 'components/Grid/GridContainer.js';
 import GridItem from 'components/Grid/GridItem.js';
 import Button from 'components/CustomButtons/Button.js';
 import Card from 'components/Card/Card.js';
-import CardBody from 'components/Card/CardBody.js';
 import CardHeader from 'components/Card/CardHeader.js';
-import CardFooter from 'components/Card/CardFooter.js';
-import CustomInput from 'components/CustomInput/CustomInput.js';
 
 import styles from 'assets/jss/nextjs-material-kit/pages/contactUsPage.js';
 
@@ -27,7 +20,7 @@ import logoWhite from 'assets/img/logo-white.png';
 
 const useStyles = makeStyles(styles);
 
-export default function LoginPage(props) {
+export default function SuccessPage(props) {
   const [cardAnimaton, setCardAnimation] = React.useState('cardHidden');
   setTimeout(function () {
     setCardAnimation('');
@@ -60,9 +53,15 @@ export default function LoginPage(props) {
                 style={{ marginTop: '80px' }}
               >
                 <CardHeader color="primary" className={classes.cardHeader}>
-                  <h3 className={classes.title}>
-                    SUCCESS <br /> Your Message have been sent!
-                  </h3>
+                  <h3 className={classes.title}>MUCHAS GRACIAS!</h3>
+                  <h5>Nos pondremos en contacto lo antes posíble</h5>
+                  <Button
+                    href="/"
+                    color="transparent"
+                    className={classes.navLink}
+                  >
+                    ← Volver al inicio
+                  </Button>
                 </CardHeader>
               </Card>
             </GridItem>
