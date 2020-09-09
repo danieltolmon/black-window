@@ -22,7 +22,8 @@ import CustomInput from 'components/CustomInput/CustomInput.js';
 import styles from 'assets/jss/nextjs-material-kit/pages/contactUsPage.js';
 
 import image from 'assets/img/backgrounds/contact-us-bg.jpg';
-import Link from 'next/link';
+import logoBlack from 'assets/img/logo-black.png';
+import logoWhite from 'assets/img/logo-white.png';
 
 const useStyles = makeStyles(styles);
 
@@ -38,7 +39,8 @@ export default function LoginPage(props) {
       <Header
         absolute
         color="transparent"
-        brand="NextJS Material Kit"
+        brandBlack={<img src={logoBlack} alt="logo" height="50px" />}
+        brandWhite={<img src={logoWhite} alt="logo" height="50px" />}
         rightLinks={<HeaderLinks />}
         {...rest}
       />
@@ -73,51 +75,41 @@ export default function LoginPage(props) {
                     </a>
                   </div>
                 </CardHeader>
-                {/* <p className={classes.divider}>Or Be Classical</p>
+                <p className={classes.divider}>Or Be Classical</p>
                 <form
                   className={classes.form}
-                  action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScEIJhXVr3iCopP9GGN2fwRMnWXvCAmRp1z9T2N19N9cubSaw/formResponse?embedded=true"
+                  // action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSflEByMaUcI0P2uVZnAiW92KAQvThE1eJIQ0ev1YDcUHWR-cw/formResponse"
+                  action="/success"
                   method="POST"
-                  target="hidden_iframe"
-                  onsubmit="submitted=true;"
+                  // target="hidden_iframe"
+                  // onsubmit="submitted=true;"
+                  data-netlify="true"
+                  name="contact-us"
+                  data-netlify-honeypot="bot-field"
                 >
+                  <input type="hidden" name="bot-field" />
                   <CardBody>
                     <CustomInput
                       labelText="First Name..."
-                      inputProps={{ name: 'entry.188505898' }}
+                      // inputProps={{ name: 'entry.1553277582' }}
+                      inputProps={{ name: 'name' }}
                       id="first"
                       formControlProps={{
                         fullWidth: true,
-                      }}
-                      inputProps={{
-                        type: 'text',
-                        endAdornment: (
-                          <InputAdornment position="end">
-                            <People className={classes.inputIconsColor} />
-                          </InputAdornment>
-                        ),
                       }}
                     />
                     <CustomInput
                       labelText="Email..."
                       id="email"
-                      inputProps={{ name: 'entry.1394731983' }}
+                      // inputProps={{ name: 'entry.59838061' }}
+                      inputProps={{ name: 'email' }}
                       formControlProps={{
                         fullWidth: true,
                       }}
-                      inputProps={{
-                        type: 'email',
-                        endAdornment: (
-                          <InputAdornment position="end">
-                            <Email className={classes.inputIconsColor} />
-                          </InputAdornment>
-                        ),
-                      }}
                     />
                     <CustomInput
-                      labelText="Your Message"
+                      labelText="Your Message..."
                       id="message"
-                      inputProps={{ name: 'entry.459729972' }}
                       formControlProps={{
                         fullWidth: true,
                         className: classes.textArea,
@@ -125,6 +117,8 @@ export default function LoginPage(props) {
                       inputProps={{
                         multiline: true,
                         rows: 5,
+                        // name: 'entry.1118507046',
+                        name: 'message',
                       }}
                     />
                     <CardFooter className={classes.cardFooter}>
@@ -132,18 +126,8 @@ export default function LoginPage(props) {
                         SEND !
                       </Button>
                     </CardFooter>
-                    <iframe
-                      src="https://docs.google.com/forms/d/e/1FAIpQLScEIJhXVr3iCopP9GGN2fwRMnWXvCAmRp1z9T2N19N9cubSaw/viewform?embedded=true"
-                      width="100%"
-                      height="1000px"
-                      frameborder="0"
-                      marginheight="0"
-                      marginwidth="0"
-                    >
-                      Cargando…
-                    </iframe>
                   </CardBody>
-                </form> */}
+                </form>
               </Card>
             </GridItem>
           </GridContainer>

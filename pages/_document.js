@@ -12,6 +12,15 @@ class MyDocument extends Document {
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
           />
+          <meta
+            property="og:description"
+            content="Productora video Barcelona, los mejores videos a buen priecio"
+          />
+          <meta
+            property="og:title"
+            content="Black Window Studio | Productora video"
+          />
+          <meta property="og:type" content="website" />
           <meta name="theme-color" content="#000000" />
           <link
             rel="shortcut icon"
