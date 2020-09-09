@@ -56,7 +56,7 @@ export default function HeaderLinks({ handleDrawerToggle, setScrollToVideos }) {
             color="transparent"
             className={classes.navLink}
             onClick={() => {
-              handleDrawerToggle();
+              handleDrawerToggle && handleDrawerToggle();
               setScrollToVideos(true);
             }}
           >
