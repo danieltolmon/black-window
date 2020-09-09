@@ -97,9 +97,7 @@ export default function Videos(props) {
                   BLACK WINDOW <br />
                   <span className={classes.studio}>STUDIO</span>
                 </h1>
-                <h3 className={classes.subtitle}>
-                  {/* Los mejores videos al alcance de tu mano. */}
-                </h3>
+                <h3 className={classes.subtitle}></h3>
               </div>
             </GridItem>
           </GridContainer>
@@ -109,7 +107,7 @@ export default function Videos(props) {
       <div className={classNames(classes.main, classes.mainRaised)} ref={myRef}>
         <div
           style={{
-            padding: '80px 0',
+            padding: '1px 0 80px 0',
             height: '100%',
           }}
         >
