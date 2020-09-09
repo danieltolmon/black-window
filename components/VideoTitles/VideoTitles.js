@@ -7,7 +7,7 @@ export default function VideoTitle({ children }) {
         margin: '20px',
         textAlign: 'center',
         fontFamily: 'Montserrat',
-        marginTop: '100px',
+        marginTop: '80px',
       }}
     >
       {children}
