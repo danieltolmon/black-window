@@ -118,7 +118,7 @@ export default function Header(props) {
         >
           <div className={classes.appResponsive}>
             {leftLinks}
-            {rightLinks}
+            {React.cloneElement(rightLinks, { handleDrawerToggle })}
           </div>
         </Drawer>
       </Hidden>

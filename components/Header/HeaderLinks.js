@@ -22,7 +22,7 @@ import styles from 'assets/jss/nextjs-material-kit/components/headerLinksStyle.j
 
 const useStyles = makeStyles(styles);
 
-export default function HeaderLinks(props) {
+export default function HeaderLinks({ handleDrawerToggle, setScrollToVideos }) {
   const classes = useStyles();
   return (
     <List className={classes.list}>
@@ -51,11 +51,14 @@ export default function HeaderLinks(props) {
         />
       </ListItem> */}
       <ListItem className={classes.listItem}>
-        {props.setScrollToVideos ? (
+        {setScrollToVideos ? (
           <Button
             color="transparent"
             className={classes.navLink}
-            onClick={() => props.setScrollToVideos(true)}
+            onClick={() => {
+              handleDrawerToggle();
+              setScrollToVideos(true);
+            }}
           >
             Our Videos
           </Button>
