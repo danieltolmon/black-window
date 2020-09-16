@@ -48,7 +48,7 @@ export default function Video(props) {
             }}
             frameBorder="0"
             allowFullScreen
-            src={`https://www.youtube.com/embed/${id}?autoplay=1`}
+            src={`https://www.youtube.com/embed/${id}?autoplay=1&mute=1&enablejsapi=1`}
           ></iframe>
         </div>
         <Footer whiteFont />
