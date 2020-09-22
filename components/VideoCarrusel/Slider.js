@@ -3,7 +3,7 @@ import Slider from 'react-slick';
 import styles from 'assets/jss/nextjs-material-kit/pages/videosPage.js';
 import Link from 'next/link';
 
-export default function CenterMode({ videos }) {
+export default function CenterMode({ videos, setVideoId }) {
   const settings = {
     centerMode: true,
     centerPadding: '60px',
@@ -40,7 +40,12 @@ export default function CenterMode({ videos }) {
           return (
             <li key={id} className={styles.card}>
               <Link
-                href={{ pathname: '/video', query: { id: resourceId.videoId } }}
+                href={{
+                  pathname: '/',
+                  query: { id: resourceId.videoId },
+                }}
+                scroll={false}
+                onClick={() => setVideoId(resourceId.videoId)}
               >
                 <img
                   style={{

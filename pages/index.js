@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { useRouter } from 'next/router';
 import classNames from 'classnames';
-import Link from 'next/link';
 import { makeStyles } from '@material-ui/core/styles';
 import Header from 'components/Header/Header.js';
 import HeaderLinks from 'components/Header/HeaderLinks.js';
@@ -11,6 +10,7 @@ import GridItem from 'components/Grid/GridItem.js';
 import { fetchYoutubeList } from '../data/youtubeAPI';
 import Slider from 'components/VideoCarrusel/Slider.js';
 import VideoTitle from 'components/VideoTitles/VideoTitles.js';
+import VideoPopup from 'components/VideoPopup/Modal.js';
 
 import Parallax from 'components/Parallax/Parallax.js';
 
@@ -32,11 +32,12 @@ export default function Videos(props) {
   const [videosSpots, setVideosSpots] = useState();
   const [scrollToVideos, setScrollToVideos] = useState(false);
   const router = useRouter();
+  const { id, videos } = router.query;
 
   const myRef = useRef();
 
   useEffect(() => {
-    if (router.query.videos === 'videoclips') {
+    if (videos === 'videoclips') {
       scrollTo();
     }
   });
@@ -114,13 +115,13 @@ export default function Videos(props) {
           {videosClips && (
             <>
               <VideoTitle>VIDEOCLIPS</VideoTitle>
-              <Slider videos={videosClips} />{' '}
+              <Slider videos={videosClips} />
             </>
           )}
           {videosEventos && (
             <>
               <VideoTitle>EVENTS</VideoTitle>
-              <Slider videos={videosEventos} />{' '}
+              <Slider videos={videosEventos} />
             </>
           )}
           {videosSpots && (
@@ -131,6 +132,7 @@ export default function Videos(props) {
           )}
         </div>
       </div>
+      {id && <VideoPopup id={id} />}
       <Footer />
     </div>
   );
